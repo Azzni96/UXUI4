@@ -337,6 +337,20 @@ footer {
     justify-content: flex-start;
     align-items: center;
   }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header a i{
+    margin-top: 100px ;
+    margin-right: 70px ;
+  }
+  #search-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   nav {
     background-color: black;
     height: auto;
@@ -349,16 +363,16 @@ footer {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
   }
   nav ul li {
     margin: 10px 0;
   }
-  label {
-    text-align: center;
-    width: 100%;
-  }
+
+
   #porkkana_kuva {
     width: 50%;
     position: absolute;
@@ -378,21 +392,12 @@ footer {
   .info {
     background-color: #000;
   }
-  h2 {
-    font-size: 25px;
-    color: #000;
-    border-radius: 40px;
-    width: 100%;
-    border: 0.5px solid #050505; /* Adjust the border width and color as needed */
-    padding: 0.5px; /* Optional: Add some padding for better appearance */
-    text-align: center; /* Optional: Center the text */
-  }
+
+
   #lause {
     font-size: 30px;
   }
-  .container {
-    width: 100%;
-  }
+
   .info {
     text-align: center;
   }
