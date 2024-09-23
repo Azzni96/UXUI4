@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravinola Pages</title>
+    <link rel="stylesheet" href="Ravintolastyle.css" />
+    <script src="Ravintola.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7b630d683f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <header id="nav">
+        <nav>
+          <ul>
+            <li><h1>Lounas.</h1></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <a id="search-logo">
+          <i id="Kuva" class="fas fa-sign-in-alt" aria-hidden="true"></i>
+          <input
+            type="search"
+            id="search"
+            name="search"
+            placeholder="search..."
+          />
+        </a>
+      </header>
+      <section>
+        <header id="hero-image">
+          <h1>Lounari.</h1>
+          <p>Mitäs <span>tänään syötäisiin</span></p>
+          <p>
+            Tutustu Lounari-ravintolan sekä lähialueiden ruokalistoihin ja löydä
+            oma suosikkisi
+          </p>
+          <button>Tutustu tästä</button>
+        </header>
+      </section>
+      <section class="rekstriointi">
+        <div class="container">
+          <div class="container-login">
+            <h2 id="form-title">Log In</h2>
+            <div id="Login" class="form-container active">
+              <form id="login-form">
+                <label for="login_username">Username</label>
+                <input
+                  type="text"
+                  id="login_username"
+                  name="username"
+                  placeholder="Username"
+                  minlength="3"
+                  pattern="^[a-zA-Z]+$"
+                  required
+                />
+                <label for="login_password">Password</label>
+                <input
+                  type="password"
+                  id="login_password"
+                  name="password"
+                  placeholder="Password"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+                  minlength="8"
+                  required
+                />
+                <button id="button" type="submit">Log In</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="container-register">
+            <div id="register-form" class="form-container">
+              <form
+                id="register-form-content"
+                action="/submit_registration"
+                method="post"
+              >
+                <label for="register_username">Username</label>
+                <input
+                  type="text"
+                  id="register_username"
+                  name="username"
+                  placeholder="Username"
+                  minlength="3"
+                  pattern="^[a-zA-Z]+$"
+                  required
+                />
+                <label for="register_email">Email</label>
+                <input
+                  type="email"
+                  id="register_email"
+                  name="email"
+                  placeholder="Email"
+                  pattern="(?i).+@Metropolia.fi"
+                  required
+                />
+                <label for="register_password">Password</label>
+                <input
+                  type="password"
+                  id="register_password"
+                  name="password"
+                  placeholder="Password"
+                  minlength="8"
+                  maxlength="15"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+                  required
+                />
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  placeholder="Confirm Password"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                <button id="button" type="submit">Sign Up</button>
+              </form>
+            </div>
+            <button id="switch-btn" class="switch-btn">
+              Don't have an account? Sign up now
+            </button>
+            <i id="Logo">Close</i>
+          </div>
+        </div>
+      </section>
+
+      <section class="home">
+        <div id="text">
+          <h3>RUOKALISTAT</h3>
+          <p>Tutki lähialueiden ruokalistoja</p>
+        </div>
+        <div id="lista">
+          <p>Salaatti</p>
+          <p>liha</p>
+          <p>Kana</p>
+          <p>Kala</p>
+          <p>Kasvis</p>
+        </div>
+      </section>
+      <section>
+        <div class="info">
+          <div>
+            <div id="porkkana_kuva">
+              <img src="porkkana.png" alt="porkkana" />
+            </div>
+            <div id="A">
+              <img class="ravintola-kuva" src="ravintola.jpg" alt="ravintola" />
+            </div>
+            <div id="B">
+              <p>
+                <span id="lause">Additional Information</span>
+              </p>
+              <p id="teksti">This is our story</p>
+              <p>
+                We strive to offer an exceptional experience with every visit.
+                Whether you're here for a casual meal or a special occasion, our
+                team is dedicated to making your time memorable. We take pride
+                in our carefully crafted dishes, made with the freshest
+                ingredients to ensure a delightful dining experience. Join us
+                and savor the flavors that make our restaurant a favorite among
+                locals and visitors alike.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>@ Azzni</footer>
+    </main>
+  </body>
+</html>

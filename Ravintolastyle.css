@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #fb3812;
+  --main-border-color: #000000;
+  --active-bg: #181818;
+  --retro-black: rgb(23, 37, 33);
+  --gold-metallic: rgb(255, 183, 0);
+  --light-orange: rgb(251, 140, 0);
+  --light-grey: rgb(202, 202, 202);
+  --icon-color: #9d9d9d;
+  --txt-color: rgb(20, 24, 22);
+  --dark-color: rgb(0, 0, 0);
+  --grey-color: rgb(155, 161, 181);
+  --white: #ffffff;
+  --loading: #202020;
+  --border-error: #e74c3c;
+  --border-success: #2ecc71;
+  --transition-time: 0.3s;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("ruoka.jpg");
+  position: relative;
+}
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 90px;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav li {
+  margin-right: 5px;
+}
+nav h1 {
+  color: var(--gold-metallic);
+}
+nav h1:hover {
+  color: var(--light-orange);
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  width: 70px;
+}
+header a {
+  margin: 0 10px;
+  color: white;
+}
+header i {
+  margin: 20px;
+}
+#search-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header li a:hover {
+  color: var(--main-border-color);
+  background-color: var(--gold-metallic);
+  border-radius: 10px;
+}
+header input {
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--gold-metallic);
+}
+header i:hover {
+  color: var(--gold-metallic);
+}
+header input:hover,
+header input:focus {
+  background-color: var(--gold-metallic);
+}
+
+#hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  min-height: 300px;
+  max-height: 700px;
+  width: 100%;
+  background-color: brown;
+  background-image: url("Ruokakuva.jpeg");
+  background-repeat: no-repeat;
+  background-position: start start;
+  background-size: cover;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+#hero-image h1 {
+  color: black;
+  font-size: 40px;
+  margin: 20px;
+}
+#hero-image p {
+  color: rgb(12, 3, 3);
+  font-size: 15px;
+  margin: 20px;
+  max-width: 400px;
+}
+#hero-image p span {
+  color: black;
+  font-weight: bold;
+}
+#hero-image button {
+  display: flex;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: black;
+  color: gold;
+}
+#hero-image button:hover {
+  background-color: gold;
+  color: black;
+}
+#text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#text h3 {
+  color: black;
+  font-size: 25px;
+  margin: 20px;
+}
+#lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid black;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Ruokakuva.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+#login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#lista p {
+  padding: 5px;
+  margin: 10px;
+  color: black;
+  background-color: sandybrown;
+  border: 1px solid sandybrown;
+  border-radius: 20%;
+}
+#lista p:hover {
+  background-color: black;
+  color: gold;
+}
+
+.rekstriointi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.container {
+  display: none;
+}
+.container-login {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+}
+.container-register {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.rekstriointi h2 {
+  text-align: center;
+  color: rgb(17, 14, 14);
+  font-size: 25px;
+  margin: 20px;
+}
+#register-form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.rekstriointi input {
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  width: 95%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.rekstriointi label {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: rgb(252, 219, 3);
+  border: 1px solid black;
+  padding: 5px 5px;
+}
+.rekstriointi button {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgb(252, 219, 3);
+  color: black;
+}
+.rekstriointi button:hover {
+  background-color: black;
+  color: white;
+}
+.rekstriointi input:hover,
+.rekstriointi input:focus {
+  background-color: rgb(252, 219, 3);
+  color: black;
+}
+.form-container {
+  display: none;
+}
+.form-container.active {
+  display: block;
+}
+#Logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+
+}
+
+#Logo:hover {
+  background-color: rgb(252, 219, 3);
+  color: black;
+}
+.info-container {
+  position: relative;
+}
+.info {
+  background-image: url("ruoka.jpg");
+  background-color: #000;
+  position: relative;
+  float: center;
+  width: 100%;
+  margin: 10% auto;
+  padding: 50px;
+  max-width: 900px;
+}
+.ravintola-kuva {
+  float: left;
+  width: 35%;
+  margin-right: 40px;
+  margin-top: 0;
+}
+
+/* Text Styles */
+p {
+  color: black;
+  margin-bottom: 10px;
+}
+#lause {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+#teksti {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#porkkana_kuva {
+  position: absolute;
+  bottom: 80%;
+  width: 30%;
+  left: 80%;
+}
+img {
+  width: 50%;
+  height: auto;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 430px) {
+  #nav {
+    height: 45vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  nav {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  label {
+    text-align: center;
+    width: 100%;
+  }
+  #porkkana_kuva {
+    width: 50%;
+    position: absolute;
+    bottom: 93%;
+    left: 80%;
+    transform: translateX(-70%);
+  }
+  .ravintola-kuva {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  #hero-image {
+    min-height: 200px;
+    max-height: 300px;
+  }
+  .info {
+    background-color: #000;
+  }
+  h2 {
+    font-size: 25px;
+    color: #000;
+    border-radius: 40px;
+    width: 100%;
+    border: 0.5px solid #050505; /* Adjust the border width and color as needed */
+    padding: 0.5px; /* Optional: Add some padding for better appearance */
+    text-align: center; /* Optional: Center the text */
+  }
+  #lause {
+    font-size: 30px;
+  }
+  .container {
+    width: 100%;
+  }
+  .info {
+    text-align: center;
+  }
+  #Kuva {
+    width: 50px;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    cursor: pointer;
+  }
+  div p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  div p .ravintola-kuva {
+    width: 380px;
+    height: 300px;
+  }
+}
